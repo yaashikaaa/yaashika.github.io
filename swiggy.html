@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIGGY COPERATE </title>
+    <style>
+header {
+ display:flex;
+ margin-top: 20px;
+}
+.button {
+  background-color: #fc5c2c;
+  border-radius: 2%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin-left: 600px;
+  cursor: pointer;
+}
+section{
+  display: flex;
+  margin-top: 65px;
+  margin-left: 250px;
+}
+.wrapper{
+ 
+  display: block;
+}
+.wrapper .static-txt{
+  color: rgb(19, 18, 18);
+  font-size: 45px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  
+  height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #080808;
+  font-size: 45px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 8s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+}
+section pre{
+  font-size: 28px;
+margin-left: auto;
+}
+h1{
+  font-size: 30;
+}
+hr{
+        height: 8px;
+        background-color: rgb(231, 78, 17);
+        border-radius: 20%;
+        width:60px;
+        margin-left: 0%;
+    }
+  main{
+    background-color: rgba(43, 12, 65, 0.877);
+  }
+  main pre{
+    font-size: 25px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left:600px;
+  }
+.pictures{
+  display: flex;
+  margin-top: 150px;
+}
+.pictures img{
+  width: 300px;
+  margin-left: 300px;
+  border-radius: 30px;
+}
+.pictures pre{
+  font-size: 15px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 300px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://v.fastcdn.co/u/9185f93f/53825096-0-logo.png" alt="Girl in a jacket" style="width:150px;height:50px;margin-left: 250px;">
+        <a href="#" class="button"><b>CONTACT US</b></a>
+    </header>
+    <hr style="width:100%;background-color: dimgray;height: 0%;">
+    <section>
+        <div class="wrapper">
+           <h1>CREATE</h1>
+            <div class="static-txt">MOMENTS OF </div>
+            <ul class="dynamic-txts">
+              <li><span>HAPPINESS</span></li>
+              <li><span>DELIGHT</span></li>
+              <li><span>SURPRISE</span></li>
+            </ul>
+            <pre>
+for your employees, business 
+partners and customers</pre>
+<hr>
+<pre style="font-size: 20px;">
+🎁Employee Rewards           🥘Sponsored Meals
+
+🎟️ Corporate Events          🎉Virtual Parties
+</pre>
+<a href="#" class="button" style="margin-left: 0px; margin-top: 50px;"><b>CONTACT US</b></a>
+          </div>
+          <div class="right">
+            <img src="http://v.fastcdn.co/u/9185f93f/53825451-0-Hero-Image.png" style="width:450px;margin-left: 50px;">
+          </div>
+    </section>
+    <main>
+      <div>
+<pre>
+
+
+
+
+
+
+
+
+          <b>Flexible offerings </b>
+made for your company's needs
+</pre>
+<hr style="margin-left: 750px;">
+</div>
+<div class="pictures">
+  <div class="ls" >
+    <img src="http://v.fastcdn.co/u/9185f93f/56486157-0-Corporate-Discount.png">
+    <pre>
+              <b>Corporate Discounts</b>
+
+Vouchers that enable up to 100% discounts 
+  on food for your employees across all
+       restaurants on the Swiggy app
+
+
+    </pre>
+    <img src="http://v.fastcdn.co/u/9185f93f/53827831-0-image-45.png">
+    <pre>
+                    <b>Swiggy Party</b>
+
+ Celebrate peak moments through a unique and
+   personalized experience that brings the
+    party to you, no matter where you go!
+    </pre>
+  </div>
+  <div class="rs">
+    <img src="http://v.fastcdn.co/u/9185f93f/53827826-0-Money-2.png">
+    <pre>
+              <b>Swiggy Money</b>
+ss
+  Vouchers and wallet top-ups can be 
+    redeemed by your teams across all 
+     restaurants on the Swiggy app
+
+    </pre>
+    <img src="https://v.fastcdn.co/u/9185f93f/56485842-0-Corporate-Discounts.png">
+    <pre>
+                    <b>Swiggy Super</b>
+
+  Delight your employees by giving them 
+    the exclusive perks of the Swiggy
+            Super membership.
+    </pre>
+  </div>
+  </div>
+</div>
+<pre style="font-size: 15px;">
+                    Find the perfect solution for your team</pre>
+    </main>
+    <a href="#" class="button" style="margin-left:700px;"><b>CONTACT US</b></a>
+</body>
+</html>
