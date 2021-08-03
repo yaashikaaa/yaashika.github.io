@@ -6,6 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOW.BIKES</title>
     <style>
+        
+        .myForm {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.8em;
+width: 30em;
+padding: 1em;
+border: 1px solid #ccc;
+}
+
+.myForm * {
+box-sizing: border-box;
+}
+
+.myForm fieldset {
+border: none;
+padding: 0;
+}
+
+.myForm legend,
+.myForm label {
+padding: 0;
+font-weight: bold;
+}
+
+.myForm label.choice {
+font-size: 0.9em;
+font-weight: normal;
+}
+
+.myForm label {
+text-align: left;
+display: block;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm input[type="datetime-local"],
+.myForm select,
+.myForm textarea {
+float: right;
+width: 60%;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+.myForm textarea {
+height: 100px;
+}
+
+.myForm input[type="radio"],
+.myForm input[type="checkbox"] {
+margin-left: 40%;
+}
+
+.myForm button {
+padding: 1em;
+border-radius: 0.5em;
+background: #eee;
+border: none;
+font-weight: bold;
+margin-left: 40%;
+margin-top: 1.8em;
+}
+
+.myForm button:hover {
+background: #ccc;
+cursor: pointer;
+}
         body{
             background-color: rgb(247, 223, 227);
         }
@@ -82,9 +153,97 @@
 
   display:flex;
   word-spacing: normal;
-  
-  
 }
+section{
+  
+  margin-top: 65px;
+ 
+}
+.wrapper{
+ 
+  display: block;
+}
+.wrapper .static-txt{
+  color: rgb(19, 18, 18);
+  font-size: 45px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  
+  height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #080808;
+  font-size: 45px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 8s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  line-height: 90px;
+}
+.button {
+  background-color: #fc5c2c;
+  border-radius: 2%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ margin-left: 600px;
+  cursor: pointer;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+}
+section pre{
+  font-size: 28px;
+margin-left: auto;
+}  
+main{
+   
+  }
+  main pre{
+    font-size: 25px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left:600px;
+  }
+.pictures{
+  display: flex;
+  margin-top: 150px;
+}
+.pictures img{
+  width: 300px;
+  margin-left: 300px;
+  border-radius: 30px;
+}
+.pictures pre{
+  font-size: 15px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 300px;
+}
+
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -95,6 +254,9 @@ iframe{
 .data{
   background-color:purple;
   color: white;
+}
+.left img{
+  width: 200px;
 }
      
     </style>
@@ -189,5 +351,172 @@ iframe{
       <img src="data:image/png;base64,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" alt="Mountains" style="height: 100px;">
     </div>
   </div>
+  <hr style="width:100%;background-color:purple;height: 10px;">
+  <section style="display: flex; margin-left: 250px;">
+    <div class="wrapper">
+       <h1>CREATE</h1>
+        <div class="static-txt">MOMENTS OF </div>
+        <ul class="dynamic-txts">
+          <li><span>HAPPINESS</span></li>
+          <li><span>DELIGHT</span></li>
+          <li><span>SURPRISE</span></li>
+        </ul>
+        <pre>
+for your employees, business 
+partners and customers</pre>
+<hr>
+<pre style="font-size: 20px;">
+🎁One Tap Booking          🥘Transparent Pricing
+
+🎟️Real Time Tracking         🎉Quality Assurance
+</pre>
+
+      </div>
+      <div class="right">
+        <img src="http://v.fastcdn.co/u/9185f93f/53825451-0-Hero-Image.png" style="width:450px;margin-left: 50px;">
+      </div>
+</section>
+<hr style="width:100%;background-color:purple;height: 10px;">
+<main style="background-color: purple;">
+  <pre>
+
+
+  </pre>
+  <div>
+
+
+</div>
+<div class="pictures">
+<div class="ls" >
+<img src="https://now.bike/assets/images/tracking.png">
+<pre>
+          <b>YOUR PORTAL TO BETTER
+             DELIVERIES</b>
+
+
+             NOW automatically assigns the best
+              Rider and Route for your order to 
+              enable fast and efficient deliveries.
+
+
+</pre>
+<img src="https://now.bike/assets/images/open-api.png">
+<pre>
+                <b>DELIVER FROM YOUR
+                  ONLINE STORE</b>
+
+                  Our easy to use NOW open api make it
+                   easy for you to turn on fast local
+                    deliveries at click of a button
+</pre>
+</div>
+<div class="rs">
+<img src="https://now.bike/assets/images/money.jpeg">
+<pre>
+          <b>TRANSPARENT PRICING</b>
+
+          NOW Delivery using its allocation and
+           routing alogorithms provides Upfront
+            Pricing at the time of placing and Order.
+
+</pre>
+<img src="https://now.bike/assets/images/track-device.png">
+<pre>
+                <b>Own the customer
+                  journey</b>
+
+                  With our Real Time tracking solution you 
+                  know when the package is going to be 
+                  delivered and all intermediary states.
+</pre>
+</div>
+</div>
+</div>
+<section style="display: flex; background-color: cornflowerblue;margin-top: 0px;">
+  <div style="color:purple;font-family: Georgia, 'Times New Roman', Times, serif;">
+    <pre >
+    REGISTER AS MERCHANT IN JUST 15 MIN
+    
+    1.Express delivery in less then 2 hour
+
+    2.Access more then 4k+ delivery person
+
+    3.Full automated service
+
+    4.24*7 support
+    </pre>
+
+  </div>
+  <div>
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm" style="margin-left: 400px;">
+
+  <p>
+  <label>Name
+  <input type="text" name="customer_name" required>
+  </label> 
+  </p>
+  
+  <p>
+  <label>Phone 
+  <input type="tel" name="phone_number">
+  </label>
+  </p>
+  
+  <p>
+  <label>Email 
+  <input type="email" name="email_address">
+  </label>
+  </p>
+  
+  <fieldset>
+  <legend>Whats the capacity of your order?</legend>
+  <p><label class="choice"> <input type="radio" name="taxi" required value="car"> small </label></p>
+  <p><label class="choice"> <input type="radio" name="taxi" required value="van"> big </label></p>
+  <p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> bulk </label></p>
+  </fieldset>
+  
+  
+  
+  <p>
+  <label>Pickup Date/Time
+  <input type="datetime-local" name="pickup_time" required>
+  </label>
+  </p>
+    
+  <p>
+  <label>Pickup Place
+  <select id="pickup_place" name="pickup_place">
+  <option value="" selected="selected">Select One</option>
+  <option value="office" >Taxi Office</option>
+  <option value="town_hall" >Town Hall</option>
+  <option value="telepathy" >We'll Guess!</option>
+  </select>
+  </label> 
+  </p>
+  
+  <p>
+  <label>Dropoff Place
+  <input type="text" name="dropoff_place" required list="destinations">
+  </label>
+  
+  <datalist id="destinations">
+  <option value="Airport">
+  <option value="Beach">
+  <option value="Fred Flinstone's House">
+  </datalist>
+  </p>
+  
+  <p>
+  <label>Special Instructions
+  <textarea name="comments" maxlength="500"></textarea>
+  </label>
+  </p>
+  
+  <p><button>Submit Booking</button></p>
+  
+  </form>
+  </div>
+</section>
+
 </body>
 </html>
